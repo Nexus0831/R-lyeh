@@ -15,8 +15,7 @@ const plugins = [
     'process.env': {
       NODE_ENV: JSON.stringify('production')
     }
-  }),
-  new webpack.optimize.UglifyJsPlugin()
+  })
 ];
 
 console.log('--------------- production ---------------');
