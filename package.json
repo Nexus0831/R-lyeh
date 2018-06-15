@@ -1,6 +1,7 @@
 {
   "name": "hituji-test",
   "version": "0.1.0",
+  "homepage": "https://nexus0831.github.io/R-lyeh",
   "description": "",
   "main": "index.js",
   "scripts": {
