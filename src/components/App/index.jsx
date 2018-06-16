@@ -17,7 +17,7 @@ import { theme } from '../../assets/theme';
 
 class App extends React.Component {
   render() {
-    console.log("This is the process.env", process.env.PUBLIC_URL);
+    console.log("This is the process.env", process);
     return (
       <div
         style={{
@@ -25,7 +25,7 @@ class App extends React.Component {
         }}
       >
         <BrowserRouter
-          basename={process.env.PUBLIC_URL}
+          basename={process.env.URL}
         >
           <MuiThemeProvider theme={theme} >
             <Routes
