@@ -43,7 +43,7 @@ class Material extends React.Component {
           >
             <Toolbar>
               <Typography variant="title" color="inherit">
-                Material-UI-Play
+                {"R'lyeh"}
               </Typography>
             </Toolbar>
           </AppBar>
