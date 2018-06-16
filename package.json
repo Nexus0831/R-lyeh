@@ -1,9 +1,9 @@
 {
-  "name": "hituji-test",
+  "name": "R-lyeh",
   "version": "0.1.0",
   "homepage": "https://nexus0831.github.io/R-lyeh",
   "description": "",
-  "main": "index.js",
+  "main": "docs/main.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/local.js --history-api-fallback",
     "develop": "webpack --config webpack/develop.js",
@@ -70,6 +70,7 @@
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "gh-pages": "^1.2.0",
     "webpack-cli": "^3.0.6"
   }
 }

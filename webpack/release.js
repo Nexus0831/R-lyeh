@@ -25,7 +25,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, './../docs'),
     filename: 'main.js',
-    publicPath: '/'
+    publicPath: './'
   },
   plugins,
   resolve: {
