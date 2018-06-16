@@ -26,7 +26,6 @@ class App extends React.Component {
         <BrowserRouter
           basename={process.env.PUBLIC_URL}
         >
-          {console.log(process)}
           <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
