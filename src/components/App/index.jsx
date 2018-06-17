@@ -15,6 +15,7 @@ import { theme } from '../../assets/theme';
 
 class App extends React.Component {
   render() {
+    console.log(process);
     return (
       <div
         style={{
