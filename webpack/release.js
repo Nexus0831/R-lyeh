@@ -26,7 +26,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, './../docs'),
     filename: 'main.js',
-    publicPath: './'
+    publicPath: 'https://nexus0831.github.io/R-lyeh/'
   },
   plugins,
   resolve: {

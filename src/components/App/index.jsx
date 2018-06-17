@@ -22,9 +22,7 @@ class App extends React.Component {
           height: '100%'
         }}
       >
-        <BrowserRouter
-          basename={process.env.PUBLIC_URL}
-        >
+        <BrowserRouter>
           <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
