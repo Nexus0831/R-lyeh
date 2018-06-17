@@ -3,6 +3,7 @@ require('babel-polyfill');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // プラグイン
 const plugins = [
@@ -16,7 +17,8 @@ const plugins = [
       NODE_ENV: JSON.stringify('production'),
       PUBLIC_URL: JSON.stringify('https://nexus0831.github.io/R-lyeh')
     }
-  })
+  }),
+  new UglifyJsPlugin()
 ];
 
 console.log('--------------- release ---------------');
@@ -26,7 +28,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, './../docs'),
     filename: 'main.js',
-    publicPath: 'https://nexus0831.github.io/R-lyeh/'
+    publicPath: './'
   },
   plugins,
   resolve: {
