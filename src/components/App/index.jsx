@@ -6,9 +6,7 @@ import { bindActionCreators } from 'redux';
 
 import { BrowserRouter } from 'react-router-dom';
 
-// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
@@ -17,7 +15,6 @@ import { theme } from '../../assets/theme';
 
 class App extends React.Component {
   render() {
-    console.log("This is the process.env", process);
     return (
       <div
         style={{
@@ -25,7 +22,7 @@ class App extends React.Component {
         }}
       >
         <BrowserRouter
-          basename={process.env.URL}
+          basename={process.env.PUBLIC_URL}
         >
           <MuiThemeProvider theme={theme} >
             <Routes

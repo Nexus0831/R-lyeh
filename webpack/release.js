@@ -13,7 +13,8 @@ const plugins = [
   }),
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: JSON.stringify('production')
+      NODE_ENV: JSON.stringify('production'),
+      PUBLIC_URL: JSON.stringify('https://nexus0831.github.io/R-lyeh')
     }
   })
 ];
