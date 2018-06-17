@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 
 import { connect } from 'react-redux';
@@ -15,14 +16,15 @@ import { theme } from '../../assets/theme';
 
 class App extends React.Component {
   render() {
-    console.log(process);
     return (
       <div
         style={{
           height: '100%'
         }}
       >
-        <BrowserRouter>
+        <BrowserRouter
+          basename={PUBLIC_URL}
+        >
           <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
