@@ -23,7 +23,7 @@ class Routes extends React.Component {
       >
         <Switch>
           <Route
-            path="/"
+            path={PUBLIC_URL}
             exact
             render={
               props => (

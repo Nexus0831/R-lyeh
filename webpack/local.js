@@ -12,6 +12,7 @@ const plugins = [
     template: path.join(__dirname, './../public/index.html'),
   }),
   new webpack.DefinePlugin({
+    PUBLIC_URL: JSON.stringify('/'),
     'process.env': {
       NODE_ENV: JSON.stringify('local')
     }
