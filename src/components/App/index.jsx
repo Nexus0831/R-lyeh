@@ -22,7 +22,9 @@ class App extends React.Component {
           height: '100%'
         }}
       >
-        <Router>
+        <Router
+          basename={PUBLIC_URL}
+        >
           <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
