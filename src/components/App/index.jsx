@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { bindActionCreators } from 'redux';
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
@@ -22,13 +22,15 @@ class App extends React.Component {
           height: '100%'
         }}
       >
-        <BrowserRouter>
+        <Router
+          basename={PUBLIC_URL}
+        >
           <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
             />
           </MuiThemeProvider>
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }

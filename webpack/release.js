@@ -13,7 +13,7 @@ const plugins = [
     template: path.join(__dirname, './../public/index.html'),
   }),
   new webpack.DefinePlugin({
-    PUBLIC_URL: JSON.stringify('https://nexus0831.github.io/R-lyeh/'),
+    PUBLIC_URL: JSON.stringify('/R-lyeh/'),
     'process.env': {
       NODE_ENV: JSON.stringify('production')
     }
