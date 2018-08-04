@@ -8,6 +8,9 @@ import { bindActionCreators } from 'redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
@@ -25,7 +28,16 @@ class App extends React.Component {
         <Router
           basename={PUBLIC_URL}
         >
-          <MuiThemeProvider theme={theme} >
+          <MuiThemeProvider theme={theme}>
+            <AppBar
+              color="primary"
+            >
+              <Toolbar>
+                <Typography variant="title" color="inherit">
+                  {"R'lyeh"}
+                </Typography>
+              </Toolbar>
+            </AppBar>
             <Routes
               {...this.props}
             />

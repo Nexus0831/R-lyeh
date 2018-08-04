@@ -23,7 +23,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import * as actions from './../../actions/material';
+import * as actions from '../../actions/home';
 
 import {
   CardContainer,
@@ -31,23 +31,12 @@ import {
   MyButton
 } from './cssinjs';
 
-class Material extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div
         id="material"
       >
-        <HeaderContainer>
-          <AppBar
-            color="primary"
-          >
-            <Toolbar>
-              <Typography variant="title" color="inherit">
-                {"R'lyeh"}
-              </Typography>
-            </Toolbar>
-          </AppBar>
-        </HeaderContainer>
         <CardContainer>
           <Card>
             <CardContent>
@@ -68,10 +57,10 @@ class Material extends React.Component {
   }
 }
 
-Material = connect(state => ({
-  formValues: getFormValues('material')(state),
-  valid: isValid('material')(state)
-}))(Material);
+Home = connect(state => ({
+  formValues: getFormValues('home')(state),
+  valid: isValid('home')(state)
+}))(Home);
 
 const mapStateToProps = (state) => {
   return {
@@ -90,5 +79,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(reduxForm({
-  form: 'material',
-})(Material)));
+  form: 'home',
+})(Home)));

@@ -7,7 +7,8 @@ import {
 
 import { Route } from 'react-router';
 
-import Material from '../Material';
+import Home from '../Home';
+import Chart from '../Chart';
 
 // import { withTheme } from '@material-ui/core/styles';
 // import { theme } from '../../assets/theme';
@@ -22,12 +23,26 @@ class Routes extends React.Component {
         }}
       >
         <Switch>
+          {/* Home */}
           <Route
             path="/"
             exact
             render={
               props => (
-                <Material
+                <Home
+                  {...props}
+                />
+              )
+            }
+            {...this.props}
+          />
+          {/* Chart */}
+          <Route
+            path="/chart"
+            exact
+            render={
+              props => (
+                <Chart
                   {...props}
                 />
               )
