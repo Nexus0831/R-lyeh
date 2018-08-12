@@ -12,7 +12,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/core/Icon';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
@@ -35,7 +35,14 @@ class App extends React.Component {
               color="primary"
             >
               <Toolbar>
-                <IconButton color="inherit" aria-label="Menu">
+                <IconButton
+                  color="inherit"
+                  aria-label="Menu"
+                  style={{
+                    marginLeft: '-12px',
+                    marginRight: '20px',
+                  }}
+                >
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="title" color="inherit">
