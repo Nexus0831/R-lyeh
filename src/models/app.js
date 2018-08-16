@@ -8,17 +8,7 @@ const AppState = Record({
 });
 
 class App extends AppState {
-  drawerOpen(state, payload) {
-    const newState = state.update(
-      'isOpen',
-      () => {
-        return payload.isOpen;
-      }
-    );
-    return newState;
-  }
-
-  drawerClose(state, payload) {
+  toggleDrawer(state, payload) {
     const newState = state.update(
       'isOpen',
       () => {

@@ -54,7 +54,7 @@ class App extends React.Component {
                     marginLeft: '-12px',
                     marginRight: '20px',
                   }}
-                  onClick={this.props.drawerOpen}
+                  onClick={() => this.props.toggleDrawer(true)}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -63,15 +63,28 @@ class App extends React.Component {
                 </Typography>
               </Toolbar>
             </AppBar>
-            <Drawer open={this.props.app.isOpen} onClose={this.props.drawerClose}>
-              <List>
-                <ListItem button>
-                  <ListItemIcon>
-                    <BarChartIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Chart" />
-                </ListItem>
-              </List>
+            <Drawer
+              open={this.props.app.isOpen}
+              onClose={() => this.props.toggleDrawer(false)}
+            >
+              <div
+                tabIndex={0}
+                role="button"
+                onClick={() => this.props.toggleDrawer(false)}
+                onKeyDown={() => this.props.toggleDrawer(false)}
+                style={{
+                  width: '250px'
+                }}
+              >
+                <List>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <BarChartIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Chart" />
+                  </ListItem>
+                </List>
+              </div>
             </Drawer>
             <Routes
               {...this.props}
