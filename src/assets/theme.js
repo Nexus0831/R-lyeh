@@ -9,7 +9,7 @@ import yellow from '@material-ui/core/colors/yellow';
 export const theme = createMuiTheme({
   palette: {
     type: 'dark',
-    primary: purple,
+    primary: pink,
     secondary: yellow,
   },
 });
