@@ -1,8 +1,6 @@
 import * as actions from './../actions/app';
 
-import {
-  handleActions
-} from 'redux-actions';
+import { handleActions } from 'redux-actions';
 
 import App from '../models/app';
 
