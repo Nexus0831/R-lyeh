@@ -13,6 +13,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Drawer from '@material-ui/core/Drawer';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
@@ -42,6 +43,7 @@ class App extends React.Component {
                     marginLeft: '-12px',
                     marginRight: '20px',
                   }}
+                  onClick={this.props.drawerOpen}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -50,6 +52,9 @@ class App extends React.Component {
                 </Typography>
               </Toolbar>
             </AppBar>
+            <Drawer open={this.props.app.isOpen} onClose={this.props.drawerClose}>
+              <p>Drawer</p>
+            </Drawer>
             <Routes
               {...this.props}
             />
