@@ -28,7 +28,7 @@ import Routes from '../Routes';
 
 import { theme } from '../../assets/theme';
 
-import { drawerTitle } from '../../../Datas/titleData';
+import { drawerTitle } from '../../../data/titleData';
 
 
 class App extends React.Component {
